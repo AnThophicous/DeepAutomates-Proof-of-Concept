@@ -4,10 +4,38 @@
 
 This Proof of Concept demonstrates that authenticated requests inside the DeepSeek web client can be automated by reusing data already exposed to the browser during a legitimate session.
 
-This is **not presented as a vulnerability or exploit**.
+This is **not presented as a vulnerability or exploit**.  
 The objective of this research was to analyze the client-side request flow, understand how Proof-of-Work (PoW) validation is handled by the browser, and verify whether requests could be reproduced through browser-side automation without modifying server behavior.
 
 No bypasses, privilege escalation, or server compromise were involved.
+
+---
+
+# Demonstration Images
+
+## First Demonstration
+
+Shows a successful automated prompt appearing correctly inside the conversation after the request flow completed.
+
+![First Demonstration](./First.png)
+
+---
+
+## Second Demonstration
+
+Shows the browser console observing the PoW lifecycle and SSE response flow after sanitization.
+
+Sensitive implementation details, session identifiers, and automation logic were intentionally censored before publication.
+
+![Second Demonstration](./Second.png)
+
+---
+
+## Third Demonstration
+
+Additional example showing the authenticated workflow replication functioning during a legitimate browser session.
+
+![Third Demonstration](./Third.png)
 
 ---
 
@@ -71,9 +99,9 @@ No private APIs were breached, no hidden endpoints were discovered, and no unaut
 
 The PoC should therefore be classified as:
 
-* Client-side request automation
-* Browser session reuse
-* Authenticated workflow replication
+- Client-side request automation
+- Browser session reuse
+- Authenticated workflow replication
 
 rather than a traditional security vulnerability.
 
